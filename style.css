@@ -1,0 +1,75 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .hero-section{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1600x500') center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .btn-cta {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+  }
+  .btn-cta:hover {
+    background-color: #0d6efd;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  .features .col {
+    transition: transform 0.3s;
+  }
+  .features .col:hover {
+    transform: translateY(-10px);
+  }
+  footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+  }
+  /* design for about us */
+  .section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .team-member {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  .intro-text {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* service design */
+  .service-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  /* contact design */
+  .contact-form-section {
+    background: #ffffff;
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.05);
+  }
+
+  /* register login*/
+  .form-section {
+    background: #ffffff;
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.05);
+  }
