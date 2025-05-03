@@ -6,13 +6,14 @@
   <title>Services | WebDev Agency</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="#">WebDev Agency</a>
+      <a class="navbar-brand" href="#">WebDev<span class="text-primary">Agency</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,76 +34,209 @@
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
-      <h1 class="display-4 fw-bold">Our Services</h1>
-      <p class="lead">Crafting digital experiences that deliver results.</p>
+      <div class="row align-items-center min-vh-80">
+        <div class="col-lg-8 mx-auto text-center text-white">
+          <h1 class="display-3 fw-bold mb-4">Our Services</h1>
+          <p class="lead mb-0">Comprehensive web solutions tailored to your needs</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Services Content -->
-  <section class="container py-5">
-    <h2 class="text-center section-title">What We Offer</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card service-card h-100 text-center">
-          <div class="card-body">
-            <i class="bi bi-laptop fs-1 text-primary"></i>
-            <h5 class="card-title mt-3">Website Development</h5>
-            <p class="card-text">Custom, scalable websites that look great and perform even better.</p>
+  <!-- Main Services -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">What We Offer</h2>
+        <p class="lead text-muted">End-to-end web development solutions for your business</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <div class="card-body p-4">
+              <div class="mb-4">
+                <i class="bi bi-laptop display-4 text-primary"></i>
+              </div>
+              <h4 class="card-title mb-3">Website Development</h4>
+              <p class="card-text text-muted">Custom, scalable websites that look great and perform even better. We use modern technologies to create responsive and fast-loading sites.</p>
+              <!-- <ul class="list-unstyled mt-4">
+                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Custom Design</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Responsive Layout</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Performance Optimization</li>
+              </ul> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <div class="card-body p-4">
+              <div class="mb-4">
+                <i class="bi bi-phone display-4 text-primary"></i>
+              </div>
+              <h4 class="card-title mb-3">Mobile-First Design</h4>
+              <p class="card-text text-muted">Creating seamless experiences across all devices. Our mobile-first approach ensures your site looks and works perfectly everywhere.</p>
+              <!-- <ul class="list-unstyled mt-4">
+                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Adaptive Design</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Touch-Friendly Interface</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Cross-Device Testing</li>
+              </ul> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <div class="card-body p-4">
+              <div class="mb-4">
+                <i class="bi bi-graph-up display-4 text-primary"></i>
+              </div>
+              <h4 class="card-title mb-3">SEO Optimization</h4>
+              <p class="card-text text-muted">Boost your online visibility with our SEO services. We implement best practices to help you rank better in search results.</p>
+              <!-- <ul class="list-unstyled mt-4">
+                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Keyword Research</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Technical SEO</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Performance Tracking</li>
+              </ul> -->
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card service-card h-100 text-center">
-          <div class="card-body">
-            <i class="bi bi-phone fs-1 text-success"></i>
-            <h5 class="card-title mt-3">Responsive Design</h5>
-            <p class="card-text">Mobile-first designs that ensure your site looks perfect on any device.</p>
+    </div>
+  </section>
+
+  <!-- Additional Services -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Additional Services</h2>
+        <p class="lead text-muted">Complementary solutions to enhance your web presence</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0">
+            <div class="card-body p-4">
+              <i class="bi bi-cart text-primary h1 mb-3"></i>
+              <h5>E-commerce Solutions</h5>
+              <p class="text-muted">Custom online stores with secure payment integration</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0">
+            <div class="card-body p-4">
+              <i class="bi bi-pencil-square text-primary h1 mb-3"></i>
+              <h5>Content Management</h5>
+              <p class="text-muted">Easy-to-use CMS for content updates</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0">
+            <div class="card-body p-4">
+              <i class="bi bi-speedometer2 text-primary h1 mb-3"></i>
+              <h5>Performance Optimization</h5>
+              <p class="text-muted">Speed up your website for better user experience</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0">
+            <div class="card-body p-4">
+              <i class="bi bi-shield-check text-primary h1 mb-3"></i>
+              <h5>Security Solutions</h5>
+              <p class="text-muted">Protect your website from threats</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card service-card h-100 text-center">
-          <div class="card-body">
-            <i class="bi bi-graph-up fs-1 text-warning"></i>
-            <h5 class="card-title mt-3">SEO Optimization</h5>
-            <p class="card-text">Boost visibility with clean code, fast performance, and keyword integration.</p>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <!-- <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Our Process</h2>
+        <p class="lead text-muted">How we bring your vision to life</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="text-center">
+            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+              <h3 class="mb-0">1</h3>
+            </div>
+            <h5>Discovery</h5>
+            <p class="text-muted">Understanding your needs and goals</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+              <h3 class="mb-0">2</h3>
+            </div>
+            <h5>Planning</h5>
+            <p class="text-muted">Creating a detailed project roadmap</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+              <h3 class="mb-0">3</h3>
+            </div>
+            <h5>Development</h5>
+            <p class="text-muted">Building your solution</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+              <h3 class="mb-0">4</h3>
+            </div>
+            <h5>Launch</h5>
+            <p class="text-muted">Deploying and maintaining</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card service-card h-100 text-center">
-          <div class="card-body">
-            <i class="bi bi-cart fs-1 text-danger"></i>
-            <h5 class="card-title mt-3">E-commerce Solutions</h5>
-            <p class="card-text">Launch your online store with secure, user-friendly shopping experiences.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card service-card h-100 text-center">
-          <div class="card-body">
-            <i class="bi bi-pencil-square fs-1 text-info"></i>
-            <h5 class="card-title mt-3">UI/UX Design</h5>
-            <p class="card-text">Beautiful interfaces focused on user experience and usability.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card service-card h-100 text-center">
-          <div class="card-body">
-            <i class="bi bi-code-slash fs-1 text-secondary"></i>
-            <h5 class="card-title mt-3">Custom Web Apps</h5>
-            <p class="card-text">Powerful, interactive applications tailored to your business workflow.</p>
-          </div>
-        </div>
-      </div>
+    </div>
+  </section> -->
+
+  <!-- CTA Section -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+      <h2 class="mb-4">Ready to Start Your Project?</h2>
+      <p class="lead mb-4">Let's discuss how we can help you achieve your goals</p>
+      <a href="contact.html" class="btn btn-light btn-lg">Get in Touch</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      &copy; 2025 WebDev Agency. All rights reserved.
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="mb-3">WebDevAgency</h5>
+          <p class="text-muted">Creating digital experiences that matter.</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="mb-3">Contact</h5>
+          <ul class="list-unstyled">
+            <li>hello@webdevagency.com</li>
+            <li>+1 234 567 890</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 WebDevAgency. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 

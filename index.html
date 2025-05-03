@@ -6,23 +6,23 @@
   <title>WebDev Agency | Home</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="#">WebDev Agency</a>
+    <a class="navbar-brand" href="#">WebDev<span class="text-primary">Agency</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-
         <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
@@ -35,70 +35,123 @@
 <!-- Hero Section -->
 <section class="hero-section">
   <div class="container">
-    <h1>Building Beautiful & Functional Websites</h1>
-    <p class="lead mt-3 mb-4">We create responsive, modern, and result-driven web experiences for startups and businesses.</p>
-    <a href="#" class="btn btn-outline-light btn-cta">Explore Our Work</a>
+    <div class="row align-items-center min-vh-80">
+      <div class="col-lg-6 text-white">
+        <h1 class="display-3 fw-bold mb-4">Crafting Digital Excellence</h1>
+        <p class="lead mb-5">We create responsive, modern, and result-driven web experiences that transform your digital presence.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="btn btn-light btn-lg">Get Started</a>
+          <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Our Work</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Features -->
 <section class="features py-5">
-  <div class="container text-center">
-    <h2 class="mb-4">Why Choose Us</h2>
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Why Choose Us</h2>
+      <p class="lead text-muted">We deliver excellence through our core strengths</p>
+    </div>
     <div class="row g-4">
       <div class="col-md-4">
-        <i class="bi bi-lightning-charge fs-1 text-primary"></i>
-        <h5 class="mt-3">Fast Development</h5>
-        <p>We deliver efficient and fast websites using the latest technologies.</p>
+        <div class="card h-100 p-4">
+          <i class="bi bi-lightning-charge"></i>
+          <h5 class="mt-4 mb-3">Fast Development</h5>
+          <p class="text-muted">Rapid deployment with cutting-edge technologies and agile methodologies.</p>
+        </div>
       </div>
       <div class="col-md-4">
-        <i class="bi bi-phone fs-1 text-primary"></i>
-        <h5 class="mt-3">Responsive Design</h5>
-        <p>Your site will look great on all devices — mobile, tablet, or desktop.</p>
+        <div class="card h-100 p-4">
+          <i class="bi bi-phone"></i>
+          <h5 class="mt-4 mb-3">Responsive Design</h5>
+          <p class="text-muted">Seamless experiences across all devices and screen sizes.</p>
+        </div>
       </div>
       <div class="col-md-4">
-        <i class="bi bi-rocket fs-1 text-primary"></i>
-        <h5 class="mt-3">SEO Optimized</h5>
-        <p>We ensure your site ranks well on search engines to reach your audience.</p>
+        <div class="card h-100 p-4">
+          <i class="bi bi-rocket"></i>
+          <h5 class="mt-4 mb-3">SEO Optimized</h5>
+          <p class="text-muted">Built-in best practices to help you rank better in search results.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Carousel -->
-<section class="container mb-5">
-  <h2 class="text-center mb-4">Our Work</h2>
-  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="teamwork.jpeg" class="d-block w-100" alt="...">
+<!-- Recent Work -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Recent Projects</h2>
+      <p class="lead text-muted">Some of our featured work</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100">
+          <img src="teamwork.jpeg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Corporate Website Redesign</h5>
+            <p class="card-text text-muted">Modern redesign for a leading tech company</p>
+          </div>
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="dev.jpeg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="Agency.webp" class="d-block w-100" alt="...">
+      <div class="col-md-6">
+        <div class="card h-100">
+          <img src="dev.jpeg" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">E-commerce Platform</h5>
+            <p class="card-text text-muted">Custom shopping experience with advanced features</p>
+          </div>
+        </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
   </div>
 </section>
 
-
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+  <div class="container text-center">
+    <h2 class="mb-4">Ready to Start Your Project?</h2>
+    <p class="lead mb-4">Let's create something amazing together</p>
+    <a href="contact.html" class="btn btn-light btn-lg">Contact Us</a>
+  </div>
+</section>
 
 <!-- Footer -->
 <footer>
   <div class="container">
-    &copy; 2025 WebDev Agency. All rights reserved.
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h5 class="mb-3">WebDevAgency</h5>
+        <p class="text-muted">Creating digital experiences that matter.</p>
+      </div>
+      <div class="col-md-4">
+        <h5 class="mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="about us.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5 class="mb-3">Contact</h5>
+        <ul class="list-unstyled">
+          <li>hello@webdevagency.com</li>
+          <li>+1 234 567 890</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 WebDevAgency. All rights reserved.</p>
+    </div>
   </div>
 </footer>
 
-<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
