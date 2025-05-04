@@ -51,7 +51,7 @@ body {
 
 .hero-section {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  min-height: 80vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   position: relative;
