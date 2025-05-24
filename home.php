@@ -82,7 +82,7 @@ $email = $_SESSION['email'];
             echo '
             <div class="col-md-4">
               <div class="card h-100 shadow-sm">
-                <img src="' . $row["image_url"] . '" class="card-img-top product-img" alt="Product Image">
+                <img src="' . $row["image"] . '" class="card-img-top product-img" alt="Product Image">
                 <div class="card-body">
                   <h5 class="card-title">' . htmlspecialchars($row["name"]) . '</h5>
                   <p class="card-text text-muted">' . htmlspecialchars($row["description"]) . '</p>
