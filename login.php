@@ -1,3 +1,42 @@
+<?php
+session_start(); // Important: Start session before anything else
+require 'config.php';
+
+$login_message = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = trim($_POST['email']);
+    $password = trim($_POST['password']);
+
+     if ($email === 'admin@gmail.com' && $password === 'admin') {
+        $_SESSION['role'] = 'admin';
+        $_SESSION['email'] = $email;
+        header("Location: dashboard.php");
+        exit();
+    }
+
+    // Get user by email
+    $sql = "SELECT * FROM users WHERE email='$email'";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result && mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
+
+        // Verify hashed password
+        if (password_verify($password, $row['password'])) {
+            // Set session and redirect
+            $_SESSION['email'] = $email;
+            header("Location: home.php");
+            exit();
+        } else {
+            $login_message = "<div class='alert alert-danger'>Invalid email or password!</div>";
+        }
+    } else {
+        $login_message = "<div class='alert alert-danger'>Invalid email or password!</div>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +49,7 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body class="bg-light">
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
     <div class="container">
@@ -41,22 +81,23 @@
               <div class="text-center mb-4">
                 <h2 class="fw-bold">Welcome Back</h2>
                 <p class="text-muted">Log in to your account to continue</p>
+                
+                <!-- Show Login Success/Error Message -->
+                <?php if (!empty($login_message)) echo $login_message; ?>
               </div>
 
-              
-
               <!-- Login Form -->
-              <form>
+              <form action="login.php" method="POST">
                 <div class="row g-3">
                   <div class="col-12">
                     <div class="form-floating">
-                      <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
                       <label for="email">Email Address</label>
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="form-floating">
-                      <input type="password" class="form-control" id="password" placeholder="Password" required>
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                       <label for="password">Password</label>
                     </div>
                   </div>
@@ -86,7 +127,7 @@
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="mt-5">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-4">
@@ -126,26 +167,6 @@
       </div>
     </div>
   </footer>
-
-  <style>
-    .divider {
-      display: flex;
-      align-items: center;
-      text-align: center;
-      color: #6c757d;
-    }
-    
-    .divider::before,
-    .divider::after {
-      content: '';
-      flex: 1;
-      border-bottom: 1px solid #dee2e6;
-    }
-    
-    .divider-text {
-      padding: 0 1rem;
-    }
-  </style>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
