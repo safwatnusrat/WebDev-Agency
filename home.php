@@ -6,7 +6,6 @@ if (!isset($_SESSION['email'])) {
 }
 $email = $_SESSION['email'];
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,138 +15,185 @@ $email = $_SESSION['email'];
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link href="style.css" rel="stylesheet">
   <style>
-    body {
+    html, body {
+      height: 100%;
       font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
     }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
     .hero {
       background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
       color: white;
       padding: 100px 0;
     }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
-    .hero p {
-      font-size: 1.2rem;
-    }
+
     .product-img {
       height: 200px;
       object-fit: cover;
+    }
+
+    .description {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .btn-order {
+      margin-top: auto;
+    }
+
+    .see-more {
+      color: #0d6efd;
+      cursor: pointer;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">WebDev<span class="text-primary">Agency</span></a>
-    <div class="collapse navbar-collapse justify-content-end">
+    <a class="navbar-brand" href="#">WebDev<span class="text-primary">Agency</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Hero Section -->
-<section class="hero text-center">
-  <div class="container">
-    <h1>Welcome, <?php echo htmlspecialchars($email); ?>!</h1>
-    <p class="mt-3">Browse and order your favorite products below.</p>
-  </div>
-</section>
-
-<!-- Products Section -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">Our Products</h2>
-      <p class="text-muted">Explore and order what you need.</p>
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center min-vh-80">
+        <div class="col-lg-8 mx-auto text-center text-white">
+          <h1 class="display-3 fw-bold mb-4">Our Portfolio</h1>
+          <p class="lead mb-0">Showcasing our best work and successful projects</p>
+        </div>
+      </div>
     </div>
-    <div class="row g-4">
+  </section>
 
-    <?php
-    $conn = new mysqli("localhost", "root", "", "web_dev");
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+  <!-- Products Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Our Products</h2>
+        <p class="text-muted">Explore and order what you need.</p>
+      </div>
+      <div class="row g-4">
 
-    $result = $conn->query("SELECT * FROM products");
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo '
-            <div class="col-md-4">
-              <div class="card h-100 shadow-sm">
-                <img src="' . $row["image"] . '" class="card-img-top product-img" alt="Product Image">
-                <div class="card-body">
-                  <h5 class="card-title">' . htmlspecialchars($row["name"]) . '</h5>
-                  <p class="card-text text-muted">' . htmlspecialchars($row["description"]) . '</p>
-                  <p class="fw-bold text-primary">$' . number_format($row["price"], 2) . '</p>
-                  <form method="post" action="order.php">
-                    <input type="hidden" name="product_id" value="' . $row["id"] . '">
-                    <button type="submit" class="btn btn-primary w-100">Order Now</button>
-                  </form>
+      <?php
+      $conn = new mysqli("localhost", "root", "", "web_dev");
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
+
+      $result = $conn->query("SELECT * FROM products");
+      if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+              echo '
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                  <img src="' . $row["image"] . '" class="card-img-top product-img" alt="Product Image">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">' . htmlspecialchars($row["name"]) . '</h5>
+                    <p class="card-text description" id="desc-' . $row["id"] . '">' . htmlspecialchars($row["description"]) . '</p>
+                    <span class="see-more" onclick="toggleDescription(' . $row["id"] . ')">See more</span>
+                    <p class="fw-bold text-primary mt-3">$' . number_format($row["price"], 2) . '</p>
+                    
+                   <form method="post" class="mt-auto" action="' . (isset($_SESSION["email"]) ? "order.php" : "register.html") . '">
+                      <input type="hidden" name="product_id" value="' . $row["id"] . '">
+                      <button type="submit" class="btn btn-primary w-100 btn-order">Order Now</button>
+                    </form>
+                   
+
+                  </div>
                 </div>
-              </div>
-            </div>
-            ';
-        }
-    } else {
-        echo '<p class="text-center">No products available at the moment.</p>';
-    }
+              </div>';
+          }
+      } else {
+          echo '<p class="text-center">No products available at the moment.</p>';
+      }
 
-    $conn->close();
-    ?>
-
+      $conn->close();
+      ?>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <!-- Footer -->
-<footer>
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <h5 class="mb-3">WebDevAgency</h5>
-          <p class="text-muted">Creating digital experiences that matter.</p>
-        </div>
-        <div class="col-md-4">
-          <h5 class="mb-3">Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about us.html">About Us</a></li>
-            <li><a href="service.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5 class="mb-3">Follow Us</h5>
-          <div class="d-flex gap-3">
-            <a href="#" class="text-decoration-none">
-              <i class="bi bi-facebook fs-5"></i>
-            </a>
-            <a href="#" class="text-decoration-none">
-              <i class="bi bi-twitter fs-5"></i>
-            </a>
-            <a href="#" class="text-decoration-none">
-              <i class="bi bi-linkedin fs-5"></i>
-            </a>
-            <a href="#" class="text-decoration-none">
-              <i class="bi bi-instagram fs-5"></i>
-            </a>
-          </div>
-        </div>
+<footer class="py-4 bg-dark text-white">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h5 class="mb-3">WebDevAgency</h5>
+        <p class="text-muted">Creating digital experiences that matter.</p>
       </div>
-      <hr class="my-4">
-      <div class="text-center">
-        <p class="mb-0">&copy; 2025 WebDevAgency. All rights reserved.</p>
+      <div class="col-md-4">
+        <h5 class="mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white">Home</a></li>
+          <li><a href="about us.html" class="text-white">About Us</a></li>
+          <li><a href="service.html" class="text-white">Services</a></li>
+          <li><a href="contact.html" class="text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5 class="mb-3">Follow Us</h5>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white text-decoration-none"><i class="bi bi-facebook fs-5"></i></a>
+          <a href="#" class="text-white text-decoration-none"><i class="bi bi-twitter fs-5"></i></a>
+          <a href="#" class="text-white text-decoration-none"><i class="bi bi-linkedin fs-5"></i></a>
+          <a href="#" class="text-white text-decoration-none"><i class="bi bi-instagram fs-5"></i></a>
+        </div>
       </div>
     </div>
-  </footer>
+    <hr class="border-secondary my-4">
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 WebDevAgency. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleDescription(id) {
+  const desc = document.getElementById("desc-" + id);
+  const btn = desc.nextElementSibling;
+  desc.classList.toggle("description");
+  btn.textContent = desc.classList.contains("description") ? "See more" : "See less";
+}
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -108,6 +108,7 @@ $products = mysqli_query($conn, "SELECT * FROM products");
             <p class="mb-0 fs-5">Manage your product listings from here efficiently and with ease.</p>
         </div>
         <div>
+            <a href="admin_check_order.php" class="btn btn-light fw-semibold px-4 py-2 mt-3 mt-md-0 rounded-pill">Orders</a>
             <a href="logout.php" class="btn btn-light fw-semibold px-4 py-2 mt-3 mt-md-0 rounded-pill">Logout</a>
         </div>
     </div>
