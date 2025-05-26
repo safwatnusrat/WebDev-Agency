@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Regex patterns
     $namePattern = "/^[a-zA-Z\s]{2,50}$/";               // Only letters and spaces, 2-50 characters
-    $usernamePattern = "/^.{6,}$/";    // Alphanumeric and underscore, 4-20 characters
+    $usernamePattern = "/^.{6,}$/";    // Alphanumeric 6characters
     $emailPattern = "/^[a-z0-9]+@(gmail|yahoo)\.com$/"; // Basic email regex
     $passwordPattern = "/^(?=.*[A-Z])(?=.*\d).{6,}$/";   // At least 6 chars, 1 uppercase, 1 digit
 
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (!preg_match($usernamePattern, $username)) {
-        echo "<script>alert('Invalid username. Use 4-20 characters, letters, numbers, and underscores.'); window.location='register.html';</script>";
+        echo "<script>alert('Invalid username. Use 6 characters, letters, numbers, and underscores.'); window.location='register.html';</script>";
         exit();
     }
 
