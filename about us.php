@@ -68,9 +68,9 @@ require_once 'components/footer.php';
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card team-member h-100">
-            <img src="images/pm.jpg" class="card-img-top" alt="Emily Park">
+            <img src="images/ui_ux.webp" class="card-img-top" alt="Emily Park">
             <div class="card-body text-center">
-              <h5 class="card-title mb-1">Emily Park</h5>
+              <h5 class="card-title mb-1">Safwat Nusrat</h5>
               <p class="text-muted">Project Manager</p>
               <p class="card-text">Leading our projects with precision and excellence.</p>
               <div class="d-flex justify-content-center gap-3 mt-3">
@@ -82,9 +82,9 @@ require_once 'components/footer.php';
         </div>
         <div class="col-md-4">
           <div class="card team-member h-100">
-            <img src="images/lead_dev.webp" class="card-img-top" alt="Nina Carter">
+            <img src="images/lead_devv.jpg" class="card-img-top" alt="Nina Carter">
             <div class="card-body text-center">
-              <h5 class="card-title mb-1">Nina Carter</h5>
+              <h5 class="card-title mb-1">Nazmul Nahid</h5>
               <p class="text-muted">Lead Developer</p>
               <p class="card-text">Architecting robust and scalable solutions.</p>
               <div class="d-flex justify-content-center gap-3 mt-3">
@@ -96,9 +96,9 @@ require_once 'components/footer.php';
         </div>
         <div class="col-md-4">
           <div class="card team-member h-100">
-            <img src="images/ui_ux.webp" class="card-img-top" alt="Sara Lee">
+            <img src="images/pm.jpg" class="card-img-top" alt="Sara Lee">
             <div class="card-body text-center">
-              <h5 class="card-title mb-1">Sara Lee</h5>
+              <h5 class="card-title mb-1">Pushpita Dhar</h5>
               <p class="text-muted">UX/UI Designer</p>
               <p class="card-text">Crafting beautiful and intuitive interfaces.</p>
               <div class="d-flex justify-content-center gap-3 mt-3">
