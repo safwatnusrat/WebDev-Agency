@@ -5,6 +5,9 @@ if (!isset($_SESSION['email'])) {
     exit();
 }
 $email = $_SESSION['email'];
+
+require_once 'components/navbar.php';
+require_once 'components/footer.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,26 +72,7 @@ $email = $_SESSION['email'];
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">WebDev<span class="text-primary">Agency</span></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-        <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<?php renderNavbar('home'); ?>
 
 <main>
   <!-- Hero Section -->
@@ -106,6 +90,13 @@ $email = $_SESSION['email'];
   <!-- Products Section -->
   <section class="py-5 bg-light">
     <div class="container">
+      <?php if (isset($_SESSION['order_success'])): ?>
+        <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
+          <strong>Order Placed Successfully!</strong> Thank you for your order.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <?php unset($_SESSION['order_success']); ?>
+      <?php endif; ?>
       <div class="text-center mb-5">
         <h2 class="fw-bold">Our Products</h2>
         <p class="text-muted">Explore and order what you need.</p>
@@ -113,7 +104,7 @@ $email = $_SESSION['email'];
       <div class="row g-4">
 
       <?php
-      $conn = new mysqli("localhost", "root", "", "web_dev");
+      $conn = new mysqli("localhost", "root", "", "web_dev2");
       if ($conn->connect_error) {
           die("Connection failed: " . $conn->connect_error);
       }
