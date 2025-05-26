@@ -42,7 +42,7 @@ function renderNavbar($activePage = '') {
                        href="contact.php">Contact</a>
                 </li>
                 
-                <?php if (($isLoggedIn==='admin@gmail.com')): ?>
+                <?php if (isset($_SESSION['email']) && $_SESSION['email'] === 'admin@gmail.com'): ?>
                    
                     <li class="nav-item">
                         <a class="nav-link <?= $activePage === 'dashboard' ? 'active' : '' ?>" 
