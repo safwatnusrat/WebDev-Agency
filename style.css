@@ -1,32 +1,44 @@
 :root {
-  --primary-color: #2563eb;
-  --secondary-color: #1e40af;
-  --accent-color: #3b82f6;
-  --text-color: #1f2937;
-  --light-bg: #f3f4f6;
   --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --primary-gradient: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-indigo) 100%);
+  --hover-gradient: linear-gradient(135deg, var(--bs-primary-dark) 0%, var(--bs-indigo-dark) 100%);
+}
+
+:root[data-bs-theme=light] {
+  --bg-custom: var(--bs-gray-100);
+  --card-bg: var(--bs-white);
+  --hero-overlay: rgba(0, 0, 0, 0.5);
+  --text-color: var(--bs-dark);
+  --border-color: var(--bs-gray-300);
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+:root[data-bs-theme=dark] {
+  --bg-custom: var(--bs-gray-900);
+  --card-bg: var(--bs-gray-800);
+  --hero-overlay: rgba(0, 0, 0, 0.7);
+  --text-color: var(--bs-light);
+  --border-color: var(--bs-gray-700);
+  --nav-bg: rgba(33, 37, 41, 0.95);
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
 }
 
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
-  color: var(--text-color);
   line-height: 1.7;
+  background-color: var(--bg-custom);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar {
-  background-color: rgba(255, 255, 255, 0.95) !important;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
 
 .navbar-brand {
   font-weight: 700;
-  color: var(--primary-color) !important;
 }
 
 .nav-link {
   font-weight: 500;
-  color: var(--text-color) !important;
   position: relative;
   padding: 0.5rem 1rem !important;
   margin: 0 0.25rem;
@@ -91,6 +103,7 @@ body {
 .card {
   border: none;
   border-radius: 1rem;
+  background-color: var(--card-bg);
   box-shadow: var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

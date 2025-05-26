@@ -1,12 +1,12 @@
 <?php
 function renderFooter() {
 ?>
-<footer class="py-4 bg-dark text-white mt-5">
+<footer class="py-4 text-white mt-5">
     <div class="container">
         <div class="row g-4">
             <div class="col-md-4">
                 <h5 class="mb-3">WebDevAgency</h5>
-                <p class="text-muted">Creating digital experiences that matter.</p>
+                <p class="text-white">Creating digital experiences that matter.</p>
             </div>
             <div class="col-md-4">
                 <h5 class="mb-3">Quick Links</h5>

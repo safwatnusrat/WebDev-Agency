@@ -41,13 +41,13 @@ require_once 'components/footer.php';
           <p class="text-muted mb-4">Founded with a vision to make web development accessible and impactful, WebDev Agency has grown into a full-service digital partner for businesses worldwide.</p>
           <div class="row g-4 mt-4">
             <div class="col-6">
-              <div class="p-4 bg-light rounded-4">
+              <div class="p-4 rounded-4">
                 <h3 class="h2 mb-0 text-primary">100+</h3>
                 <p class="mb-0">Projects Completed</p>
               </div>
             </div>
             <div class="col-6">
-              <div class="p-4 bg-light rounded-4">
+              <div class="p-4 rounded-4">
                 <h3 class="h2 mb-0 text-primary">50+</h3>
                 <p class="mb-0">Happy Clients</p>
               </div>
@@ -59,7 +59,7 @@ require_once 'components/footer.php';
   </section>
 
   <!-- Team Section -->
-  <section class="py-5 bg-light">
+  <section class="py-5">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="section-title">Meet Our Team</h2>

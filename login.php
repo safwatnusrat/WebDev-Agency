@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 </head>
-<body class="bg-light">
+<body>
 
   <?php renderNavbar('login'); ?>
 

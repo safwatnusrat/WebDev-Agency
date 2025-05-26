@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link href="style.css" rel="stylesheet">
 </head>
 
-<body class="bg-light">
+<body>
   <!-- Navbar -->
   <?php renderNavbar('register'); ?>
 

@@ -44,7 +44,7 @@ require_once 'components/footer.php';
               <h5 class="card-title">Fashion E-commerce Platform</h5>
               <p class="card-text text-muted">A modern online shopping experience with advanced filtering and secure checkout.</p>
             </div>
-            <div class="card-footer bg-white border-0">
+            <div class="card-footer  border-0">
               <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
             </div>
           </div>
@@ -59,7 +59,7 @@ require_once 'components/footer.php';
               <h5 class="card-title">Creative Portfolio Website</h5>
               <p class="card-text text-muted">A minimalist portfolio showcase for a professional photographer.</p>
             </div>
-            <div class="card-footer bg-white border-0">
+            <div class="card-footer  border-0">
               <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
             </div>
           </div>
@@ -74,7 +74,7 @@ require_once 'components/footer.php';
               <h5 class="card-title">Corporate Website Redesign</h5>
               <p class="card-text text-muted">A complete overhaul of a consulting firm's digital presence.</p>
             </div>
-            <div class="card-footer bg-white border-0">
+            <div class="card-footer  border-0">
               <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
             </div>
           </div>
@@ -89,7 +89,7 @@ require_once 'components/footer.php';
               <h5 class="card-title">SaaS Landing Page</h5>
               <p class="card-text text-muted">High-converting landing page for a tech startup.</p>
             </div>
-            <div class="card-footer bg-white border-0">
+            <div class="card-footer  border-0">
               <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
             </div>
           </div>
@@ -104,7 +104,7 @@ require_once 'components/footer.php';
               <h5 class="card-title">Custom Blog CMS</h5>
               <p class="card-text text-muted">A powerful content management system for bloggers.</p>
             </div>
-            <div class="card-footer bg-white border-0">
+            <div class="card-footer  border-0">
               <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
             </div>
           </div>
@@ -119,7 +119,7 @@ require_once 'components/footer.php';
               <h5 class="card-title">Appointment Booking System</h5>
               <p class="card-text text-muted">Smart scheduling solution for service-based businesses.</p>
             </div>
-            <div class="card-footer bg-white border-0">
+            <div class="card-footer border-0">
               <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
             </div>
           </div>
@@ -129,7 +129,7 @@ require_once 'components/footer.php';
   </section>
 
   <!-- Stats Section -->
-  <section class="py-5 bg-light">
+  <section class="py-5">
     <div class="container">
       <div class="row g-4 text-center">
         <div class="col-md-3">

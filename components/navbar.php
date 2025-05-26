@@ -4,11 +4,10 @@ function renderNavbar($activePage = '') {
    
 ?>
 <!-- Add theme assets -->
-<link href="/frontend_design/css/theme.css" rel="stylesheet"/>
 <script src="/frontend_design/js/theme.js" defer></script>
 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="<?= $isLoggedIn ? 'home.php' : 'index.html' ?>">
+        <a class="navbar-brand" href="<?= $isLoggedIn ? 'home.php' : 'index.php' ?>">
             WebDev<span class="text-primary">Agency</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

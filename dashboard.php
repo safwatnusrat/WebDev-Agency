@@ -83,26 +83,6 @@ $products = mysqli_query($conn, "SELECT * FROM products");
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background: #f5f7fa;
-        }
-        .card {
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-        .form-control, .btn {
-            border-radius: 12px;
-        }
-        .table td, .table th {
-            vertical-align: middle;
-        }
-        img.product-image {
-            height: 50px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-    </style>
 </head>
 <body>
     <?php renderNavbar('dashboard'); ?>

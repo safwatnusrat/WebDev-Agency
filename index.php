@@ -61,7 +61,7 @@ require_once 'components/footer.php';
 </div>
 
 <!-- ======= Why Choose Us Section ======= -->
-<section class="why-choose-us py-5 bg-light text-center">
+<section class="why-choose-us py-5 text-center">
   <div class="container">
     <h2 class="mb-4">Why Choose Us?</h2>
     <div class="row justify-content-center">

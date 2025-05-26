@@ -71,7 +71,7 @@ require_once 'components/footer.php';
   </section>
 
   <!-- Contact Form Section -->
-  <section class="py-5 bg-light">
+  <section class="py-5">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">

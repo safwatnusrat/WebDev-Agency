@@ -90,7 +90,7 @@ require_once 'components/footer.php';
   </section>
 
   <!-- Additional Services -->
-  <section class="py-5 bg-light">
+  <section class="py-5">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="section-title">Additional Services</h2>

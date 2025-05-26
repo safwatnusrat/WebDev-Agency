@@ -88,7 +88,7 @@ require_once 'components/footer.php';
   </section>
 
   <!-- Products Section -->
-  <section class="py-5 bg-light">
+  <section class="py-5">
     <div class="container">
       <?php if (isset($_SESSION['order_success'])): ?>
         <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
