@@ -18,7 +18,7 @@ require_once 'components/footer.php';
   <?php renderNavbar('service'); ?>
 
   <!-- Hero Section -->
-  <section class="hero-section">
+  <section class="hero-section bg-primary text-white py-5">
     <div class="container">
       <div class="row align-items-center min-vh-80">
         <div class="col-lg-8 mx-auto text-center text-white">
@@ -45,11 +45,7 @@ require_once 'components/footer.php';
               </div>
               <h4 class="card-title mb-3">Website Development</h4>
               <p class="card-text text-muted">Custom, scalable websites that look great and perform even better. We use modern technologies to create responsive and fast-loading sites.</p>
-              <!-- <ul class="list-unstyled mt-4">
-                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Custom Design</li>
-                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Responsive Layout</li>
-                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Performance Optimization</li>
-              </ul> -->
+             
             </div>
           </div>
         </div>
@@ -61,11 +57,7 @@ require_once 'components/footer.php';
               </div>
               <h4 class="card-title mb-3">Mobile-First Design</h4>
               <p class="card-text text-muted">Creating seamless experiences across all devices. Our mobile-first approach ensures your site looks and works perfectly everywhere.</p>
-              <!-- <ul class="list-unstyled mt-4">
-                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Adaptive Design</li>
-                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Touch-Friendly Interface</li>
-                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Cross-Device Testing</li>
-              </ul> -->
+             
             </div>
           </div>
         </div>
@@ -77,11 +69,7 @@ require_once 'components/footer.php';
               </div>
               <h4 class="card-title mb-3">SEO Optimization</h4>
               <p class="card-text text-muted">Boost your online visibility with our SEO services. We implement best practices to help you rank better in search results.</p>
-              <!-- <ul class="list-unstyled mt-4">
-                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Keyword Research</li>
-                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Technical SEO</li>
-                <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Performance Tracking</li>
-              </ul> -->
+              
             </div>
           </div>
         </div>

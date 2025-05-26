@@ -18,7 +18,7 @@ require_once 'components/footer.php';
  <?php renderNavbar('portfolio'); ?>
 
   <!-- Hero Section -->
-  <section class="hero-section">
+  <section class="hero-section bg-primary text-white py-5">
     <div class="container">
       <div class="row align-items-center min-vh-80">
         <div class="col-lg-8 mx-auto text-center text-white">
@@ -40,7 +40,7 @@ require_once 'components/footer.php';
           <div class="card portfolio-card h-100">
             <img src="images/female-customer-reviewing-clothes.jpg" class="card-img-top" alt="E-commerce Platform">
             <div class="card-body">
-              <!-- <span class="badge bg-primary mb-2">E-commerce</span> -->
+      
               <h5 class="card-title">Fashion E-commerce Platform</h5>
               <p class="card-text text-muted">A modern online shopping experience with advanced filtering and secure checkout.</p>
             </div>

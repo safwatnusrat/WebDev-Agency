@@ -17,7 +17,7 @@ require_once 'components/footer.php';
   <!-- Navbar -->
   <?php renderNavbar('about'); ?>
   <!-- Hero Section -->
-  <section class="hero-section">
+  <section class="hero-section bg-primary text-white py-5">
     <div class="container">
       <div class="row align-items-center min-vh-80">
         <div class="col-lg-8 mx-auto text-center text-white">
