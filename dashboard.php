@@ -6,6 +6,8 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 }
 
 require 'config.php';
+require_once 'components/navbar.php';
+require_once 'components/footer.php';
 
 // Create uploads folder if not exists
 $uploadDir = __DIR__ . '/uploads/';
@@ -101,6 +103,7 @@ $products = mysqli_query($conn, "SELECT * FROM products");
     </style>
 </head>
 <body>
+    <?php renderNavbar('dashboard'); ?>
 <div class="container py-5">
     <div class="bg-primary text-white p-4 rounded-4 shadow mb-5 d-flex justify-content-between align-items-center flex-wrap">
         <div>
@@ -180,5 +183,7 @@ $products = mysqli_query($conn, "SELECT * FROM products");
         </div>
     </div>
 </div>
+<?php renderFooter(); ?>
 </body>
+
 </html>

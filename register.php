@@ -1,6 +1,7 @@
 <?php
 require 'config.php';
-
+require_once 'components/navbar.php';
+require_once 'components/footer.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Sanitize and collect POST data
@@ -80,3 +81,125 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | WebDev Agency</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+  <!-- Navbar -->
+  <?php renderNavbar('register'); ?>
+
+  <!-- Register Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-5">
+              <div class="text-center mb-4">
+                <h2 class="fw-bold">Create an Account</h2>
+                <p class="text-muted">Join our community and start your journey</p>
+              </div>
+
+             
+              <!-- Register Form -->
+              <form action="register.php" method="POST">
+                <div class="row g-3">
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="fullName" name="fullname" placeholder="Full Name"
+                        required>
+                      <label for="fullName">Full Name</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="username" name="username"
+                        placeholder="Choose Username" required>
+                      <label for="username">Username</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
+                        required>
+                      <label for="email">Email Address</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                        required>
+                      <label for="password">Password</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                        placeholder="Confirm Password" required>
+                      <label for="confirmPassword">Confirm Password</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="terms" required>
+                      <label class="form-check-label text-muted" for="terms">
+                        I agree to the <a href="#" class="text-primary">Terms of Service</a> and <a href="#"
+                          class="text-primary">Privacy Policy</a>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-100 btn-lg">Create Account</button>
+                  </div>
+                </div>
+              </form>
+
+
+              <div class="text-center mt-4">
+                <p class="mb-0 text-muted">Already have an account? <a href="login.html" class="text-primary">Login</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+ <?php renderFooter(); ?>
+
+  <style>
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #6c757d;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .divider-text {
+      padding: 0 1rem;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

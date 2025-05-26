@@ -1,3 +1,7 @@
+<?php
+require_once 'components/navbar.php';
+require_once 'components/footer.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,26 +15,7 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">WebDev<span class="text-primary">Agency</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+  <?php renderNavbar('about'); ?>
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
@@ -130,36 +115,7 @@
   
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <h5 class="mb-3">WebDevAgency</h5>
-          <p class="text-muted">Creating digital experiences that matter.</p>
-        </div>
-        <div class="col-md-4">
-          <h5 class="mb-3">Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="service.html">Services</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5 class="mb-3">Contact</h5>
-          <ul class="list-unstyled">
-            <li>hello@webdevagency.com</li>
-            <li>+1 234 567 890</li>
-          </ul>
-        </div>
-      </div>
-      <hr class="my-4">
-      <div class="text-center">
-        <p class="mb-0">&copy; 2025 WebDevAgency. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+<?php renderFooter(); ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

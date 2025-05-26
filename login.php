@@ -108,48 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="mt-5">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <h5 class="mb-3">WebDevAgency</h5>
-          <p class="text-muted">Creating digital experiences that matter.</p>
-        </div>
-        <div class="col-md-4">
-          <h5 class="mb-3">Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about us.html">About Us</a></li>
-            <li><a href="service.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5 class="mb-3">Follow Us</h5>
-          <div class="d-flex gap-3">
-            <a href="#" class="text-decoration-none">
-              <i class="bi bi-facebook fs-5"></i>
-            </a>
-            <a href="#" class="text-decoration-none">
-              <i class="bi bi-twitter fs-5"></i>
-            </a>
-            <a href="#" class="text-decoration-none">
-              <i class="bi bi-linkedin fs-5"></i>
-            </a>
-            <a href="#" class="text-decoration-none">
-              <i class="bi bi-instagram fs-5"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <hr class="my-4">
-      <div class="text-center">
-        <p class="mb-0">&copy; 2025 WebDevAgency. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+<?php renderFooter(); ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -1,3 +1,7 @@
+<?php
+require_once 'components/navbar.php';
+require_once 'components/footer.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,25 +15,7 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">WebDev<span class="text-primary">Agency</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+ <?php renderNavbar('portfolio'); ?>
 
   <!-- Hero Section -->
   <section class="hero-section">
@@ -46,15 +32,7 @@
   <!-- Portfolio Filter -->
   <section class="py-5">
     <div class="container">
-      <!-- <div class="text-center mb-5">
-        <div class="btn-group" role="group" aria-label="Portfolio filters">
-          <button type="button" class="btn btn-outline-primary active" data-filter="all">All</button>
-          <button type="button" class="btn btn-outline-primary" data-filter="web">Web Design</button>
-          <button type="button" class="btn btn-outline-primary" data-filter="ecommerce">E-commerce</button>
-          <button type="button" class="btn btn-outline-primary" data-filter="app">Applications</button>
-        </div>
-      </div> -->
-
+     
       <!-- Portfolio Grid -->
       <div class="row g-4">
         <!-- E-commerce Project -->
@@ -184,73 +162,9 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <h5 class="mb-3">WebDevAgency</h5>
-          <p class="text-muted">Creating digital experiences that matter.</p>
-        </div>
-        <div class="col-md-4">
-          <h5 class="mb-3">Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about us.html">About Us</a></li>
-            <li><a href="service.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5 class="mb-3">Follow Us</h5>
-          <div class="d-flex gap-3">
-            <a href="#" class="text-decoration-none">
-              <i class="bi bi-facebook fs-5"></i>
-            </a>
-            <a href="#" class="text-decoration-none">
-              <i class="bi bi-twitter fs-5"></i>
-            </a>
-            <a href="#" class="text-decoration-none">
-              <i class="bi bi-linkedin fs-5"></i>
-            </a>
-            <a href="#" class="text-decoration-none">
-              <i class="bi bi-instagram fs-5"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <hr class="my-4">
-      <div class="text-center">
-        <p class="mb-0">&copy; 2025 WebDevAgency. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+  <?php renderFooter(); ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Portfolio Filter Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const filterButtons = document.querySelectorAll('[data-filter]');
-      const portfolioItems = document.querySelectorAll('[data-category]');
-
-      filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          const filterValue = button.getAttribute('data-filter');
-          
-          // Update active button
-          filterButtons.forEach(btn => btn.classList.remove('active'));
-          button.classList.add('active');
-
-          // Filter items
-          portfolioItems.forEach(item => {
-            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-              item.style.display = 'block';
-            } else {
-              item.style.display = 'none';
-            }
-          });
-        });
-      });
-    });
-  </script>
+  
 </body>
 </html>
