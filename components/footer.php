@@ -12,9 +12,9 @@ function renderFooter() {
                 <h5 class="mb-3">Quick Links</h5>
                 <ul class="list-unstyled">
                     <li><a href="<?= isset($_SESSION['email']) ? 'home.php' : 'index.html' ?>" class="text-white">Home</a></li>
-                    <li><a href="about us.html" class="text-white">About Us</a></li>
-                    <li><a href="service.html" class="text-white">Services</a></li>
-                    <li><a href="contact.html" class="text-white">Contact</a></li>
+                    <li><a href="about us.php" class="text-white">About Us</a></li>
+                    <li><a href="service.php" class="text-white">Services</a></li>
+                    <li><a href="contact.php" class="text-white">Contact</a></li>
                 </ul>
             </div>
             <div class="col-md-4">

@@ -20,15 +20,15 @@ require_once 'components/footer.php';
 <?php renderNavbar('index'); ?>
 
 <!-- Hero Section -->
-<section class="hero-section">
+<section class="bg-primary text-white py-5">
   <div class="container">
     <div class="row align-items-center min-vh-80">
       <div class="col-lg-6 text-white">
         <h1 class="display-3 fw-bold mb-4">Crafting Digital Excellence</h1>
         <p class="lead mb-5">We create responsive, modern, and result-driven web experiences that transform your digital presence.</p>
         <div class="d-flex gap-3">
-          <a href="#" class="btn btn-light btn-lg">Get Started</a>
-          <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Our Work</a>
+          <a href="register.php" class="btn btn-light btn-lg">Get Started</a>
+          <a href="portfolio.php" class="btn btn-outline-light btn-lg">View Our Work</a>
         </div>
       </div>
     </div>
